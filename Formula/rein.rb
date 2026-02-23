@@ -1,26 +1,26 @@
 class Rein < Formula
   desc "Declarative language and runtime for AI agent orchestration"
   homepage "https://github.com/delamain-labs/rein"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/delamain-labs/rein/releases/download/v0.2.0/rein-v0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "b29d67fbe2db550bba352eb591d486466b735255f64d6a807a70cc32dbc6f881"
+      url "https://github.com/delamain-labs/rein/releases/download/v0.2.1/rein-v0.2.1-aarch64-apple-darwin.tar.gz"
+      sha256 "55beae4a130739887af70d5af46f4fbf91976161133eed60e809f8489b578106"
     else
-      url "https://github.com/delamain-labs/rein/releases/download/v0.2.0/rein-v0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "0ef66c18109dc1feffed0fdaf8d26e09df662134693b258f39eb5ea46bbc33ed"
+      url "https://github.com/delamain-labs/rein/releases/download/v0.2.1/rein-v0.2.1-x86_64-apple-darwin.tar.gz"
+      sha256 "b8283f4968e51c8fc748927a7052c407979012502746a10b5deb9614d98448d5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/delamain-labs/rein/releases/download/v0.2.0/rein-v0.2.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "1ba2d03af283cd14c1624510affe18ac182d53a8ebdfeac6ad2e3e1b51ea9b17"
+      url "https://github.com/delamain-labs/rein/releases/download/v0.2.1/rein-v0.2.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "acc809c84aadeeb8b8d69dd555e179a04fdbe02548653f0ae1d0e149f078a77a"
     else
-      url "https://github.com/delamain-labs/rein/releases/download/v0.2.0/rein-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b21a80b9362472b28c3aca8b8806fee34707f6ac9e84445eac0f15c196f9d7b2"
+      url "https://github.com/delamain-labs/rein/releases/download/v0.2.1/rein-v0.2.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c33fb2c98f73a8385cda8fad411155f2d20e12fe6fd2ef33d5f30c6cdadff192"
     end
   end
 
@@ -29,6 +29,6 @@ class Rein < Formula
   end
 
   test do
-    assert_match "rein-lang", shell_output("#{bin}/rein --version")
+    assert_match "rein", shell_output("#{bin}/rein --version")
   end
 end
